@@ -9,7 +9,8 @@ app.use(express.json())
 dotenv.config();
 
 app.use(cors({
-    origin: process.env.CLIENT_URL,
+    origin: 'https://route-sync.vercel.app',
+    methods: ['GET','POST','PUT','PATCH','DELETE'],
     credentials: true,
 }));
 
