@@ -22,7 +22,7 @@ const dangerlocation = async(req,res)=>{
         const dangerplaces = [];
          
         for(const cords of routeCords){
-            console.log("📍 Searching for Nearby Dangers at:", cords);
+            
             const nearby = await datab.find({
                 location:{
                     $near:{
@@ -42,11 +42,11 @@ const dangerlocation = async(req,res)=>{
                     _id: 1
                 }
             }).toArray();
-            console.log("🔎 Nearby Places Found:", nearby.length);
+        
             dangerplaces.push(...nearby);
         }
 
-        console.log("📦 Final Danger Locations Array:", dangerplaces);
+        
         res.status(200).json({data : dangerplaces});
 
       }catch(e){
