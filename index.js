@@ -15,6 +15,9 @@ app.use(cors({
 }));
 
 app.use('/route',dangerChannel)
+app.get('/',(req,res)=>{
+    res.send('Server is running')
+})
 
 connectdb();
 
