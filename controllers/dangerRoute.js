@@ -1,7 +1,8 @@
 import { MongoClient } from "mongodb";
+import dotenv from "dotenv";
+dotenv.config();
 
 const atlasString = process.env.MONGODB_STRING;
-
 const compassString = "mongodb://localhost:27017"
 
 const dangerlocation = async(req,res)=>{
