@@ -5,7 +5,7 @@ const atlasString = "mongodb+srv://utkarshsharmabd:z3kD9MmkkTJGmF2c@cluster0.7t4
 const compassString = "mongodb://localhost:27017"
 
 const dangerlocation = async(req,res)=>{
-    const client = new MongoClient(compassString)
+    const client = new MongoClient(atlasString)
     try{
 
         const {routeCords} = req.body;
