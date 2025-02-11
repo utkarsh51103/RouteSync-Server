@@ -46,7 +46,7 @@ const dangerlocation = async(req,res)=>{
             dangerplaces.push(...nearby);
         }
 
-        
+        console.log("Processing Completed");
         res.status(200).json({data : dangerplaces});
 
       }catch(e){
